@@ -2,17 +2,17 @@ version: 2
 
 models:
   - name: int_data_requests
-    discription: "transformation model for data_request, involves rename and retyping of columns and data types respectively"
+    discription: transformation model for data_request, involves rename and retyping of columns and data types respectively
     columns:
-      - name: "id_request"
+      - name: id_request
         tests:
           - unique
           - not_null
 
   - name: int_data_credit_packages
-    discription: "transformation model for data_credit_packages, involves rename and retyping of columns and data types respectively"
+    discription: transformation model for data_credit_packages, involves rename and retyping of columns and data types respectively
     columns:
-      - name: "id_credit_package"
+      - name: id_credit_package
         tests:
           - unique
           - not_null

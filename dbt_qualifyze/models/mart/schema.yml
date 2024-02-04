@@ -2,59 +2,59 @@ version: 2
 
 models:
   - name: customer_enggagement
-    discription: "This model identifies customers who have transitioned from transactional to subscription model"
+    discription: This model identifies customers who have transitioned from transactional to subscription model
     columns:
-      - name: "id_organization"
-        discription: "Unique identifier for the organization making the request, In this model it is used to identify and group audit requests made by different organization"
-      - name: "customer"
-        discription: "customer column indicates type of customer, whether the organization is using the subscription model ('Subscription') or the transactional model ('Transactional')"
-      - name: "last_request_date"
-        discription: "last_request_date column id used to find the latest date when a request was made by the organization, capturing the most recent interaction"
+      - name: id_organization
+        discription: Unique identifier for the organization making the request, In this model it is used to identify and group audit requests made by different organization
+      - name: customer
+        discription: customer column indicates type of customer, whether the organization is using the subscription model ('Subscription') or the transactional model ('Transactional')
+      - name: last_request_date
+        discription: last_request_date column id used to find the latest date when a request was made by the organization, capturing the most recent interaction
 
   - name: subscription_insights
-    discription: "This model provides data insights of customers profiles and associated subscriptions and their audit request behaviours "
+    discription: This model provides data insights of customers profiles and associated subscriptions and their audit request behaviours
     columns:
-      - name: "id_organization"
-        discription: "Unique identifier for the organization making the request"
-      - name: "customer_name"
-        discription: "Name of the customer making the request"
-      - name: "payment_cycle"
-        discription: "payment_cycle is used to analyze how different payment frequencies are associated with customer behaviors"
-      - name: "total_requests"
-        discription: "total_requests calculates the total number of unique requests associated with each customer"
-      - name: "total_audits"
-        discription: "total_audits calculates the total number of unique audits associated with each customer"
-      - name: "avg_credits_per_request"
-        discription: "avg_credits_per_request calculates the average number of credits across all requests made by each customer"
-      - name: "avg_value_eur_per_request"
-        discription: "avg_value_eur_per_request calculates the average value in Euros across all requests made by each customer"
-      - name: "earliest_audit_confirmation"
-        discription: "earliest_audit_confirmation finds the earliest date when an audit was confirmed by each customer"
-      - name: "latest_audit_confirmation"
-        discription: "latest_audit_confirmation finds the latest date when an audit was confirmed by each customer"
-      - name: "completed_audits"
-        discription: "completed_audits counts the number of unique requests where the state is 'REPORT_AVAILABLE,' indicating completed audits"
-      - name: "total_credits_in_package"
-        discription: "total_credits_in_package provides total credis available for the specified packages associate with customer profiles"
+      - name: id_organization
+        discription: Unique identifier for the organization making the request
+      - name: customer_name
+        discription: Name of the customer making the request
+      - name: payment_cycle
+        discription: payment_cycle is used to analyze how different payment frequencies are associated with customer behaviors
+      - name: total_requests
+        discription: total_requests calculates the total number of unique requests associated with each customer
+      - name: total_audits
+        discription: total_audits calculates the total number of unique audits associated with each customer
+      - name: avg_credits_per_request
+        discription: avg_credits_per_request calculates the average number of credits across all requests made by each customer
+      - name: avg_value_eur_per_request
+        discription: avg_value_eur_per_request calculates the average value in Euros across all requests made by each customer
+      - name: earliest_audit_confirmation
+        discription: earliest_audit_confirmation finds the earliest date when an audit was confirmed by each customer
+      - name: latest_audit_confirmation
+        discription: latest_audit_confirmation finds the latest date when an audit was confirmed by each customer
+      - name: completed_audits
+        discription: completed_audits counts the number of unique requests where the state is 'REPORT_AVAILABLE,' indicating completed audits
+      - name: total_credits_in_package
+        discription: total_credits_in_package provides total credis available for the specified packages associate with customer profiles
 
   - name: credit_package_utilization
-    discription: "credit_package_utilization model tracks the utilization of the credits in a packages and provide insights on credit utilization"
+    discription: credit_package_utilization model tracks the utilization of the credits in a packages and provide insights on credit utilization
     columns:
-      - name: "id_organization"
-        discription: "Unique identifier for the organization making the request"
-      - name: "payment_cycle"
-        discription: "indicates how often payments are made for the credit package"
-      - name: "total_credit_packages"
-        discription: "Total number of credit packages that are associated with organization"
-      - name: "total_credits_allocated"
-        discription: "total credit amount that is allocated for the organisation over the different package"
-      - name: "total_requests_after_subscription"
-        discription: "total requests that have been made after an organisation accepted the subscription model"
-      - name: "credits_utilized"
-        discription: "credits utiled for each request for an other here aassuming  that each request consumes 1 credit as mentioned in the case study"
-      - name: "subcription_status"
-        discription: " 1 id subcription is not not expired 0 otherwise"
-      - name: "rate_of_usage"
-        discription: "usage rate agains the expiry date of the credit amount"
-      - name: "unused_credits"
-        discription: "credit amount left for usage under valid subcription"
+      - name: id_organization
+        discription: Unique identifier for the organization making the request
+      - name: payment_cycle
+        discription: indicates how often payments are made for the credit package
+      - name: total_credit_packages
+        discription: Total number of credit packages that are associated with organization
+      - name: total_credits_allocated
+        discription: total credit amount that is allocated for the organisation over the different package
+      - name: total_requests_after_subscription
+        discription: total requests that have been made after an organisation accepted the subscription model
+      - name: credits_utilized
+        discription: credits utiled for each request for an other here aassuming  that each request consumes 1 credit as mentioned in the case study
+      - name: subcription_status
+        discription: 1 id subcription is not not expired 0 otherwise
+      - name: rate_of_usage
+        discription: usage rate agains the expiry date of the credit amount
+      - name: unused_credits
+        discription: credit amount left for usage under valid subcription

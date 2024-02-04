@@ -2,15 +2,15 @@ version: 2
 
 models:
   - name: raw_data_requests
-    discription: "Inital staging model for data_request"
+    discription: Inital staging model for data_request
     columns:
-      - name: "id_request"
+      - name: id_request
         tests:
           - unique
 
   - name: raw_data_credit_packages
-    discription: "Inital staging model for data_credit package"
+    discription: Inital staging model for data_credit package
     columns:
-      - name: "id_credit_package"
+      - name: id_credit_package
         tests:
           - unique
