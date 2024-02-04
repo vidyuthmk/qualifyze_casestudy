@@ -1,0 +1,13 @@
+dbt_qualifyze:
+  outputs:
+    dev:
+      type: duckdb
+      path: case_study.duckdb
+      threads: 1
+
+    prod:
+      type: duckdb
+      path: prod.duckdb
+      threads: 4
+
+  target: dev
